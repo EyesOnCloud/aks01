@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wf01
+  namespace: namespace-workflow-1729078722893
+  labels:
+    kubernetes.azure.com/generator: devhub
+spec:
+  type: LoadBalancer
+  selector:
+    app: wf01
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
